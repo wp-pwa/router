@@ -1,16 +1,15 @@
 import { getSnapshot } from 'mobx-state-tree';
-import { asReduxStore } from 'mst-middlewares';
 import TodoStore from '../index';
 import * as types from '../ActionTypes';
 
 function todos(initialState, action) {
   const store = TodoStore.create({ todos: initialState });
-  const reduxStore = asReduxStore(store);
-  if (action.type) reduxStore.dispatch(action);
+
+  const actionType = action.type;
+  if (actionType) store[actionType](action);
+
   return getSnapshot(store).todos;
 }
-
-// TODO: introduce `createReducer(Type): (initialState, action) in redux-interop
 
 describe('todos reducer', () => {
   it('should handle initial state', () => {
