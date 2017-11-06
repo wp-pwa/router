@@ -1,0 +1,26 @@
+{
+  "name": "router",
+  "version": "0.1.0",
+  "description": "Router for wp-pwa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wp-pwa/router.git"
+  },
+  "author": "david@worona.org",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wp-pwa/router/issues"
+  },
+  "homepage": "https://github.com/wp-pwa/router#readme",
+  "devDependencies": {
+    "babel-jest": "^21.2.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "jest": "^21.2.1",
+    "react-test-renderer": "^16.0.0"
+  }
+}
